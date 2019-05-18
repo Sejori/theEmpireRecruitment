@@ -1,0 +1,14 @@
+html, body { font-family: 'Ubuntu', sans-serif; margin: 0px; min-height: 100vh; min-width: 100vw; scroll-behavior: smooth; color: space; background-color: whitesmoke; }
+body { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+h1 { font-size: 48px; }
+h2 { font-size: 32px; }
+h3, h4 { font-size: 28px; }
+h1,h2,h3,h4 { margin: 5px; }
+p { text-align: center; margin: 0px; text-align: left; }
+a { text-decoration: none; color: white; }
+ul { margin: 0px; padding: 0px; list-style-type: none; display: flex; flex-wrap: wrap; }
+li { padding: 20px; }
+
+header { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 10vh; }
+header img { height: 20vh; width: 20vh; }
