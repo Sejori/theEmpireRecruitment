@@ -19,24 +19,104 @@
   <body>
     <header>
       <img src="./assets/logo.png" alt="theEmpire-logo">
-      <h1>theEmpire</h1>
-      <h2>Developer Applicant Questions</h2>
+      <div class="header-text">
+        <h1>theEmpire</h1>
+        <h2>Freelance Web Developer Applicantion</h2>
+      </div>
     </header>
 
-    <div id="get-started">
-      <a href="/questions">Get Started</a>
-    </div>
+    <section id="get-started">
+      <h3>Welcome to the developer recruitment test for theEmpire.</h3>
 
-    <div id="questions" style="display: none;">
-      Questions
-    </div>
+      <div class="statements">
+        <strong>
+          Please note that by sumbitting an application you are agreeing to the
+          following statements:
+        </strong>
+        <ol>
+          <li>I consent for my personal data and answers to be stored by the creator of this test.</li>
+          <li>I consent for my personal data and answers to be shared with but not stored by 3rd parties that may assist the creator of this test in reviewing my answers.</li>
+          <li>I understand that I am not entitled to receive work of any kind just by submitting this application.</li>
+          <li>I understand that I am not applying for employment but to recieve flexible work as a freelancer.</li>
+          <li>I understand that my application has been unsuccessful if I have not received any communications via email from the creator of this test after 2 weeks or more.</li>
+        </ol>
+      </div>
 
-    <div id="404" style="display: none;">
+      <a class="a-button" href="/questions">Get Started</a>
+    </section>
+
+    <section id="questions">
+      <strong>
+        Please provide your name, email address and answers to ALL of the questions below.<br><br>
+        For each question you have a text input and an image input. Please use the image input to upload a diagram of your answer if requested.
+      </strong>
+      <form id="questions-form" action="/finished" method="get">
+        <div id="personal-details" class="question">
+          <h3>Personal details:</h3>
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="candidate_name">
+            <label for="mail">E-mail:</label>
+            <input type="email" id="mail" name="candidate_mail">
+          </div>
+        </div>
+
+        <div id="question-1" class="question">
+          <h3>Question 1:</h3>
+          <h4>What is the name of the Avenue 2 blocks east of 9th Avenue in New York, USA?</h4>
+          <div class="text-answer">
+            <label for="question-1-text">Answer:</label>
+            <textarea name="candidate_q1-text" id="question-1-text" rows="2" cols="80">Input answer here.</textarea>
+          </div>
+          <div class="diagram-answer">
+            <label for="question-1-img">Diagram:</label>
+            <input type="file" accept="image/*,.pdf" id="question-1-img" name="candidate_q1-img">
+          </div>
+        </div>
+
+        <div id="question-2" class="question">
+          <h3>Question 2:</h3>
+          <h4>What tools have you used to program before? Give one brief example of something you have coded and how it worked.</h4>
+          <div class="text-answer">
+            <label for="question-2-text">Answer:</label>
+            <textarea name="candidate_q2-text" id="question-2-text" rows="2" cols="80">Input answer here.</textarea>
+          </div>
+          <div class="diagram-answer">
+            <label for="question-2-img">Diagram:</label>
+            <input type="file" accept="image/*,.pdf" id="question-2-img" name="candidate_q2-img">
+          </div>
+        </div>
+
+        <div id="question-3" class="question">
+          <h3>Question 3:</h3>
+          <h4>The sun rises in the East and sets in the West. If you were looking at the Earth from above the North Pole, in which direction would it be spinning?</h4>
+          <div class="text-answer">
+            <label for="question-3-text">Answer:</label>
+            <textarea name="candidate_q3-text" id="question-3-text" rows="2" cols="80">Input answer here.</textarea>
+          </div>
+          <div class="diagram-answer">
+            <label for="question-3-img">Diagram:</label>
+            <input type="file" accept="image/*,.pdf" id="question-3-img" name="candidate_q3-img">
+          </div>
+        </div>
+
+        <div id="submit" class="question">
+          <button class="a-button" type="submit">Submit Application</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="finished">
+      Finished
+    </section>
+
+    <section id="404">
       404 Page Not Found
-    </div>
+    </section>
 
     <!-- javascript -->
     <script src="./js/form.js"></script>
+    <script src="./js/router.js"></script>
 
   </body>
 </html>

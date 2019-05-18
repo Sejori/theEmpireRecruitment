@@ -1,14 +1,28 @@
-html, body { font-family: 'Ubuntu', sans-serif; margin: 0px; min-height: 100vh; min-width: 100vw; scroll-behavior: smooth; color: space; background-color: whitesmoke; }
-body { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+html, body { font-family: 'Ubuntu', sans-serif; margin: 0px; min-height: 100vh; min-width: 100vw; scroll-behavior: smooth; background-color: whitesmoke; }
+body { display: flex; flex-direction: column; align-items: center; }
 
 h1 { font-size: 48px; }
 h2 { font-size: 32px; }
-h3, h4 { font-size: 28px; }
-h1,h2,h3,h4 { margin: 5px; }
-p { text-align: center; margin: 0px; text-align: left; }
-a { text-decoration: none; color: white; }
+h3 { font-size: 28px; }
+h4 { font-size: 18px; }
+p { text-align: center; text-align: left; }
 ul { margin: 0px; padding: 0px; list-style-type: none; display: flex; flex-wrap: wrap; }
 li { padding: 20px; }
 
-header { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 10vh; }
-header img { height: 20vh; width: 20vh; }
+header { display: flex; justify-content: center; align-items: center; min-height: 10vh; padding-top: 20px; }
+header img { height: 20vh; width: 20vh; margin-right: 20px; }
+header h1,h2 { margin: 5px; }
+
+section { max-width: 800px; display:none; flex-direction: column; margin: 50px 0px; }
+
+.a-button { margin: auto; text-align: center; color: #777; text-decoration: none; font-size: 20px; padding: 10px; border: none; border-top: solid; border-bottom: solid; border-radius: 5px; border-color: #ab1b1e; }
+.a-button:hover { color: black; }
+.statements { color: #777; }
+.statements li { padding: 12px; }
+
+#questions { align-items: center; }
+#questions-form { display: flex; flex-direction: column; align-items: center; background-color: white; border-radius: 10px; width: 100%; padding: 20px; padding-top: 0px; margin-top: 20px; }
+.question { min-width: 600px; }
+.question h4 { max-width: 600px; }
+.text-answer { margin-bottom: 10px; }
+#submit { display: flex; justify-content: center; margin: 20px; }

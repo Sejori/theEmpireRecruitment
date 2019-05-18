@@ -4,25 +4,49 @@ var questionsDiv = document.getElementById("questions")
 var finishedDiv = document.getElementById("finished")
 var fourOhFourDiv = document.getElementById("404")
 
-// define the routes inside an object called routes and assign each route it's content div (except 404)
-var routes = {
-  '/': getStartedDiv,
-  '/questions': questionsDiv,
-  '/finished': finishedDiv
-}
+// define the routes inside an object called routes and assign each route it's content div
+// make sure 404 is final route
+var routes = [
+  {
+    pathname: "/",
+    div: getStartedDiv
+  },
+  {
+    pathname: "/questions",
+    div: questionsDiv
+  },
+  {
+    pathname: "/finished",
+    div: finishedDiv
+  },
+  {
+    pathname: "/404",
+    div: fourOhFourDiv
+  }
+]
 
 // function to be called on every new navigation
 function router() {
+  // set all routed divs to display: none
+  // note: all routed divs are set to display: none in css as well in case browser has js disabled
+  for (var i = 0; i < routes.length; i++) {
+    console.log(routes[i].div)
+    routes[i].div.style.display = "none;"
+  }
 
-  console.log(window.hash)
-  console.log(window.location.pathname)
+  // find corrent route object if available
+  let route = routes.find(route => route.pathname === window.location.pathname)
 
-  if (window.location.pathname === routes[window.location.pathname]) {
+  if (route) {
+    console.log('route found')
     // do routing functions
+    route.div.style.display = "flex"
   } else {
+    console.log('route not found')
     // return 404 content
+    routes[routes.length-1].div.style.display = "flex"
   }
 }
 
-// call router function on hash change
-window.onhashchange = router()
+// call router function on load
+router()
