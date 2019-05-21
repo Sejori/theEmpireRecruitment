@@ -1,27 +1,21 @@
-// define all router variable divs
-var getStartedDiv = document.getElementById("get-started")
-var questionsDiv = document.getElementById("questions")
-var finishedDiv = document.getElementById("finished")
-var fourOhFourDiv = document.getElementById("404")
-
 // define the routes inside an object called routes and assign each route it's content div
 // make sure 404 is final route
 var routes = [
   {
     pathname: "/",
-    div: getStartedDiv
+    div: document.getElementById("get-started")
   },
   {
     pathname: "/questions",
-    div: questionsDiv
+    div: document.getElementById("questions")
   },
   {
     pathname: "/finished",
-    div: finishedDiv
+    div: document.getElementById("finished")
   },
   {
     pathname: "/404",
-    div: fourOhFourDiv
+    div: document.getElementById("404")
   }
 ]
 

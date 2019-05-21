@@ -21,11 +21,11 @@
       <img src="./assets/logo.png" alt="theEmpire-logo">
       <div class="header-text">
         <h1>theEmpire</h1>
-        <h2>Freelance Web Developer Applicantion</h2>
+        <h2>Freelance Web Developer Application</h2>
       </div>
     </header>
 
-    <section id="get-started">
+    <section id="get-started" class="route">
       <h3>Welcome to the developer recruitment test for theEmpire.</h3>
 
       <div class="statements">
@@ -45,12 +45,12 @@
       <a class="a-button" href="/questions">Get Started</a>
     </section>
 
-    <section id="questions">
+    <section id="questions" class="route">
       <strong>
         Please provide your name, email address and answers to ALL of the questions below.<br><br>
         For each question you have a text input and an image input. Please use the image input to upload a diagram of your answer if requested.
       </strong>
-      <form id="questions-form" action="/finished" method="get">
+      <form id="questions-form" action="/finished" netlify>
         <div id="personal-details" class="question">
           <h3>Personal details:</h3>
           <div>
@@ -100,23 +100,76 @@
           </div>
         </div>
 
+        <div id="question-4" class="question">
+          <h3>Question 4:</h3>
+          <h4>What is a tidally locked planet? Please provide an example of this phenomenon within our solar system and draw a diagram explaining the cause.</h4>
+          <div class="text-answer">
+            <label for="question-4-text">Answer:</label>
+            <textarea name="candidate_q4-text" id="question-4-text" rows="2" cols="80">Input answer here.</textarea>
+          </div>
+          <div class="diagram-answer">
+            <label for="question-4-img">Diagram:</label>
+            <input type="file" accept="image/*,.pdf" id="question-4-img" name="candidate_q4-img">
+          </div>
+        </div>
+
+        <div id="question-5" class="question">
+          <h3>Question 5:</h3>
+          <h4>Why are there two high tides at any coastal location on Earth per day? Please provide a diagram.</h4>
+          <div class="text-answer">
+            <label for="question-5-text">Answer:</label>
+            <textarea name="candidate_q5-text" id="question-5-text" rows="2" cols="80">Input answer here.</textarea>
+          </div>
+          <div class="diagram-answer">
+            <label for="question-5-img">Diagram:</label>
+            <input type="file" accept="image/*,.pdf" id="question-5-img" name="candidate_q5-img">
+          </div>
+        </div>
+
+        <div id="question-6" class="question">
+          <h3>Question 6:</h3>
+          <h4>A mirror in front of you is directly facing you. You can see a reflection but you are not in it. What's going on? Please provide a diagram.</h4>
+          <div class="text-answer">
+            <label for="question-6-text">Answer:</label>
+            <textarea name="candidate_q6-text" id="question-6-text" rows="2" cols="80">Input answer here.</textarea>
+          </div>
+          <div class="diagram-answer">
+            <label for="question-6-img">Diagram:</label>
+            <input type="file" accept="image/*,.pdf" id="question-6-img" name="candidate_q6-img">
+          </div>
+        </div>
+
+        <div id="question-7" class="question">
+          <h3>Question 7:</h3>
+          <h4>What is the phone number of Professor Lucy Berthoud from the University of Bristol? If you could not type a 7 on your keyboard, how else could you dial her number?</h4>
+          <div class="text-answer">
+            <label for="question-7-text">Answer:</label>
+            <textarea name="candidate_q7-text" id="question-7-text" rows="2" cols="80">Input answer here.</textarea>
+          </div>
+          <div class="diagram-answer">
+            <label for="question-7-img">Diagram:</label>
+            <input type="file" accept="image/*,.pdf" id="question-7-img" name="candidate_q7-img">
+          </div>
+        </div>
+
         <div id="submit" class="question">
           <button class="a-button" type="submit">Submit Application</button>
         </div>
       </form>
     </section>
 
-    <section id="finished">
-      Finished
+    <section id="finished" class="route">
+      <h2>Congratulations</h2>
+      <p>You have completed your application. I hope you enjoyed the questions.</p>
+      <p>You can expect to receive correspondence within the next few days. If you want to get ahead of the curve you can read up on the technologies we use on our <a href="https://www.theEmpire.netlify.com">website</a>.</p>
     </section>
 
-    <section id="404">
+    <section id="404" class="route">
       404 Page Not Found
     </section>
 
     <!-- javascript -->
     <script src="./js/form.js"></script>
     <script src="./js/router.js"></script>
-
   </body>
 </html>
