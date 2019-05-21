@@ -24,19 +24,26 @@ function router() {
   // set all routed divs to display: none
   // note: all routed divs are set to display: none in css as well in case browser has js disabled
   for (var i = 0; i < routes.length; i++) {
-    console.log(routes[i].div)
     routes[i].div.style.display = "none;"
   }
 
   // find corrent route object if available
-  let route = routes.find(route => route.pathname === window.location.pathname)
+  let pathname = window.location.pathname
+  // format if necessary
+  if (pathname.includes('?')) pathname = pathname.substring(0, pathname.indexOf('?'))
+  if (pathname.substring(1).includes('/')) {
+    pathname = pathname.substring(1)
+    pathname = pathname.substring(0, pathname.indexOf('/'))
+    pathname = "/" + pathname
+  }
+  console.log(pathname)
+  let route = routes.find(route => route.pathname === pathname)
 
   if (route) {
-    console.log('route found')
     // do routing functions
     route.div.style.display = "flex"
   } else {
-    console.log('route not found')
+    console.log('404: Route not found')
     // return 404 content
     routes[routes.length-1].div.style.display = "flex"
   }

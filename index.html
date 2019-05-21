@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>theEmpire Applicant Questions</title>
 
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
     <!-- favicons -->
@@ -18,7 +18,7 @@
   </head>
   <body>
     <header>
-      <img src="./assets/logo.png" alt="theEmpire-logo">
+      <img src="/assets/logo.png" alt="theEmpire-logo">
       <div class="header-text">
         <h1>theEmpire</h1>
         <h2>Freelance Web Developer Application</h2>
@@ -50,7 +50,7 @@
         Please provide your name, email address and answers to ALL of the questions below.<br><br>
         For each question you have a text input and an image input. Please use the image input to upload a diagram of your answer if requested.
       </strong>
-      <form id="questions-form" action="/finished" netlify>
+      <form id="questions-form" action="/finished/" netlify>
         <div id="personal-details" class="question">
           <h3>Personal details:</h3>
           <div>
@@ -63,7 +63,7 @@
 
         <div id="question-1" class="question">
           <h3>Question 1:</h3>
-          <h4>What is the name of the Avenue 2 blocks east of 9th Avenue in New York, USA?</h4>
+          <h4>What is the name of the Avenue 2 blocks east of 9th Avenue in New York City, USA?</h4>
           <div class="text-answer">
             <label for="question-1-text">Answer:</label>
             <textarea name="candidate_q1-text" id="question-1-text" rows="2" cols="80">Input answer here.</textarea>
@@ -169,7 +169,6 @@
     </section>
 
     <!-- javascript -->
-    <script src="./js/form.js"></script>
-    <script src="./js/router.js"></script>
+    <script src="/js/router.js"></script>
   </body>
 </html>
